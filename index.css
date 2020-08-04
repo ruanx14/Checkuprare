@@ -7,9 +7,15 @@ body *, body{
 }
 .header{
     position: fixed;
+    z-index: 1;
+    top: 0;
     display: block;
     width: 100%;
-    height: 10vh;
+    height
+    : 10vh;
+}
+.container .heartwood{
+    margin-top: 10vh;
 }
 /*nav*/
 .nav{
@@ -57,7 +63,7 @@ body *, body{
     background-size: cover;
     background-position-y: -170px;
     background-position-x: 90px;
-    /* background-image: url('header.png'); */
+    background-image: url('header2.jpg'); 
     background-attachment: fixed;
 }
 .container .heartwood .greenguard-1{
@@ -78,6 +84,9 @@ body *, body{
     background: linear-gradient(rgb(1, 14, 33),rgb(1, 13, 41),rgb(1, 16, 39));
     margin-top: 1px;
 }
+.container .heartwood .greenguard-1 ul li:last-child{
+    margin-bottom: 20px;
+}
 .container .heartwood .greenguard-1 ul li:hover{
     background: linear-gradient(rgb(1, 14, 33),rgb(2, 17, 51),rgb(5, 30, 68));
 }  
@@ -97,6 +106,13 @@ body *, body{
     align-items: center;;
     width: 70%;
     text-align: center;
+}
+.container .heartwood .greenguard-2 article{
+    font-size: 2em;
+    color: white;
+    font-family: impact;
+    font-weight: bold;
+    text-shadow: 1px 2px 1px black;
 }
 .container .livingstone {
     padding: 40px;

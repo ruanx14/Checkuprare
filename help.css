@@ -1,0 +1,37 @@
+.container .graveyard{
+    margin-top: 10vh;
+}
+.container .graveyard h4{
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+}
+.container .graveyard img{
+    max-height: 500px;
+    margin: 0 auto;
+    display: block;
+}
+.container .bonecliff{
+    padding: 20px;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+.container .bonecliff ul li{
+    margin-left: 20px;
+    list-style: disc;
+}
+.container .ashfall{
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .ashfall .dailyboss{
+    text-align: center;
+    font-family: arial;
+    font-size: 1.3em;
+}
