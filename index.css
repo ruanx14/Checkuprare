@@ -3,18 +3,30 @@ body *, body{
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    color: black;
 }
-.nav{
+.header{
+    position: fixed;
+    display: block;
+    width: 100%;
     height: 10vh;
-    background-color: rgb(194, 190, 190);
 }
+/*nav*/
+.nav{
+    background-image: url('nav-crop.jpg');
+    background-attachment: scroll;
+    box-shadow: 2px 1px 2px 1px black;
+}
+/* .nav{
+    background-color: rgb(194, 190, 190);
+} */
 .nav .barrowpoint{
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 .nav .barrowpoint li{
-    background-color: rgb(194, 190, 190);
+    /* background-color: rgb(194, 190, 190); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,26 +38,63 @@ body *, body{
     width: 200px;
     font-size: 1.4em;
     text-decoration: none;
-    color: rgba(32,32,32);
+    color: rgb(221, 221, 221);
 }
 .nav .barrowpoint li:hover{
     background-color: rgb(226, 225, 225);
-    color: rgb(13, 94, 17);
-    text-shadow: -1px 1px 1px black;
+    text-shadow: -1px 2px 2px black;
 }
+.nav .barrowpoint li:hover a{
+    color: rgb(1, 14, 43);
+}
+.random{
+    height: 10vh;
+    width: 100%;
+}
+/*container*/
 .container .heartwood{
     display: flex;
-    height: 70vh;
+    background-size: cover;
+    background-position-y: -170px;
+    background-position-x: 90px;
+    /* background-image: url('header.png'); */
+    background-attachment: fixed;
 }
 .container .heartwood .greenguard-1{
     width: 30%;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+.container .heartwood .greenguard-1 ul{
+    width: 90%;
     text-align: center;
+    margin-top: 10px;
 }
 .container .heartwood .greenguard-1 ul li{
-    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(rgb(1, 14, 33),rgb(1, 13, 41),rgb(1, 16, 39));
+    margin-top: 1px;
 }
-
+.container .heartwood .greenguard-1 ul li:hover{
+    background: linear-gradient(rgb(1, 14, 33),rgb(2, 17, 51),rgb(5, 30, 68));
+}  
+.container .heartwood .greenguard-1 ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+}
+.container .heartwood .greenguard-1 ul li:hover a{
+    font-weight: bold;
+}
 .container .heartwood .greenguard-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;;
     width: 70%;
     text-align: center;
 }
