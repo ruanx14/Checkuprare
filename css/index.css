@@ -137,28 +137,43 @@ body *, body{
     padding: 10px;
     text-align: center;
     margin-bottom: 2px;
+    background: linear-gradient(rgba(4, 25, 56, 0.555),rgb(208, 214, 224), white);
+    border-right: 3px solid white;
+}
+.container .skulltower .carnivora .petshop{
+    display: grid;
+    grid-template-areas:
+    'nameitem nameitem'
+    'check btn'
+    ;
 }
 .container .skulltower .carnivora .itemsName{
+    grid-area: nameitem;
     font-size: 1.5em;
     color: rgb(228, 51, 51);
     text-shadow: 10px 4px 8px rgb(243, 133, 133);
     font-weight: bold;
     margin-bottom: 2px;
+    width: 100%;
 }
 .container .skulltower .carnivora .itemsCheck{
-    border: none;
+    grid-area: check;
+    border: 1px solid black;
     height: 30px;
     width: 30px;
-    margin-top: 2px;
+    display: block;
+    margin: 0 auto;
+} 
+.container .skulltower .carnivora .itemsCheck:checked ~ span{
+    color: rgb(4, 116, 4);
+    text-shadow: 10px 4px 8px rgb(99, 221, 51);
 }
-.container .skulltower .carnivora .petshop{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container .skulltower .carnivora .itemsBtn:hover,.container .skulltower .carnivora .itemsName:hover{
+    cursor: pointer;
 }
 .container .skulltower .carnivora .itemsBtn{
+    grid-area: btn;
     font-size: 1.3em;
-    margin-left: 5px;
     color: rgb(14, 41, 90);
     font-weight: bold;
     font-family: arial;
