@@ -41,11 +41,11 @@ body *, body{
     color: rgb(221, 221, 221);
 }
 .nav .barrowpoint li:hover{
-    background-color: rgb(226, 225, 225);
+    background-color: rgb(1, 14, 43);
     text-shadow: -1px 2px 2px black;
 }
 .nav .barrowpoint li:hover a{
-    color: rgb(1, 14, 43);
+    color: white;
 }
 .random{
     height: 10vh;
@@ -98,13 +98,27 @@ body *, body{
     width: 70%;
     text-align: center;
 }
-.container .livingstone{
+.container .livingstone {
+    padding: 40px;
+    margin-top: 15px;
+    background-color: rgb(6, 19, 37);
+}
+.container .livingstone h2{
     text-align: center;
-    height: 500px;
+    color: rgb(243, 243, 243);
+    text-shadow: 1px 1px 1px white;
 }
 .container .skulltower{
     padding: 5px;
 }
 footer{
+    background-color: rgb(6, 19, 37);
     text-align: center;
+    height: 100px;
+}
+footer a{
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
 }
