@@ -1,18 +1,21 @@
+<?php 
+    include "php/conexao.php";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css"> 
+    <link rel="stylesheet" href="css/index.css"> 
     <title>Rare Check-list</title>
 </head>
 <body>
 <header class="header">
     <nav class="nav">
         <ul class="barrowpoint">
-            <li><a href="index.html">All items</a></li>
-            <li><a href="myprogress.html">My progress</a></li>
-            <li><a href="help.html">Help, what?!</a></li>
+            <li><a href="#">All items</a></li>
+            <li><a href="./views/myprogress.php">My progress</a></li>
+            <li><a href="./views/help.html">Help, what?!</a></li>
         </ul>
     </nav>
 </header>
@@ -40,8 +43,24 @@
     <div class="livingstone"> <h2>If you got ! You must click in your item to check up in your list =)</h2></div>
 
     <div class="skulltower" id="rarelisthere"> 
-    <!-- aqui os raros  -->
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sequi ipsa aspernatur delectus culpa quod impedit, eius debitis cupiditate alias similique, voluptatum minus asperiores commodi repudiandae distinctio nemo. Assumenda, dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quod sequi. In, alias asperiores voluptates, voluptas quidem qui laboriosam cumque placeat veniam voluptatibus, magnam animi fugit corrupti quod ducimus aliquid!
+    <?php 
+    $resultado = mysqli_query($conexao, "select * from item");
+    if($resultado){
+        while($dados = mysqli_fetch_array($resultado)){
+    ?>
+    <div class="carnivora">
+        <span class="itemsName"><?=$dados['name']?></span>
+        <br>
+        <div class="petshop">
+            <input id="<?=$dados['name']?>" class="itemsCheck" type="checkbox" name="">
+            <label for="<?=$dados['name']?>" class="itemsBtn"> Got it ! </labels>
+        </div>
+    </div>
+    <?php        
+        }
+    }
+    ?>  
+
     </div>
 
 </container>

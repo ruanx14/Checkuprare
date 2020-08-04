@@ -10,3 +10,11 @@ INSERT INTO `checkuprare`.`item` (`typeItem`, `name`, `locale`) VALUES ('weapon'
 INSERT INTO `checkuprare`.`item` (`typeItem`, `name`, `locale`) VALUES ('weapon', 'Doom Ripper', 'Bone Cliff');
 INSERT INTO `checkuprare`.`item` (`typeItem`, `name`, `locale`) VALUES ('weapon', 'The Headless Horseman\'s Sword', 'Mogloween');
 INSERT INTO `checkuprare`.`item` (`typeItem`, `name`, `locale`) VALUES ('weapon', 'Legion Soulbrand', 'Arena of Souls');
+
+
+
+select * from user u join usercheck uc on u.idUser=uc.user_idUser join item i on uc.item_idItem=i.idItem where uc.done='false';
+
+select * from user u join usercheck uc on u.idUser=uc.user_idUser join item i on uc.item_idItem=i.idItem;
+
+select i.name from user u join usercheck uc on u.idUser=uc.user_idUser join item i on uc.item_idItem=i.idItem where uc.done='false' and i.typeItem='helm';

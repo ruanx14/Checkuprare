@@ -19,7 +19,7 @@ body *, body{
 }
 /*nav*/
 .nav{
-    background-image: url('nav-crop.jpg');
+    background-image: url('../image/nav-crop.jpg');
     background-attachment: scroll;
     box-shadow: 2px 1px 2px 1px black;
 }
@@ -63,7 +63,7 @@ body *, body{
     background-size: cover;
     background-position-y: -170px;
     background-position-x: 90px;
-    background-image: url('header2.jpg'); 
+    background-image: url('../image/header2.jpg'); 
     background-attachment: fixed;
 }
 .container .heartwood .greenguard-1{
@@ -126,6 +126,42 @@ body *, body{
 }
 .container .skulltower{
     padding: 5px;
+}
+.container .skulltower{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.container .skulltower .carnivora{
+    width: calc(100%/4);
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 2px;
+}
+.container .skulltower .carnivora .itemsName{
+    font-size: 1.5em;
+    color: rgb(228, 51, 51);
+    text-shadow: 10px 4px 8px rgb(243, 133, 133);
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+.container .skulltower .carnivora .itemsCheck{
+    border: none;
+    height: 30px;
+    width: 30px;
+    margin-top: 2px;
+}
+.container .skulltower .carnivora .petshop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .skulltower .carnivora .itemsBtn{
+    font-size: 1.3em;
+    margin-left: 5px;
+    color: rgb(14, 41, 90);
+    font-weight: bold;
+    font-family: arial;
 }
 footer{
     background-color: rgb(6, 19, 37);
