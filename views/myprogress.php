@@ -2,7 +2,10 @@
 <html lang="pt-br">
 <?php 
 include "../php/conexao.php";
-session_start();
+SESSION_START();
+if(!isset($_SESSION['logado'])){
+    header("Location: ../");
+}
 ?>
 <head>
     <meta charset="UTF-8">
@@ -54,7 +57,7 @@ session_start();
     <div class="skulltower" id="rarelisthere"> 
             
             <?php 
-            $query = "select i.idItem, i.name from user u join usercheck uc on u.idUser=uc.user_idUser left join item i on uc.item_idItem=i.idItem where uc.done='true' and u.idUser=".$_SESSION['idUser']." group by i.idItem";
+            $query = "select i.idItem, i.name from user u join userCheck uc on u.idUser=uc.user_idUser left join item i on uc.item_idItem=i.idItem where uc.done='true' and u.idUser=".$_SESSION['idUser']." group by i.idItem";
             $resultado = mysqli_query($conexao, $query);
             if($resultado){
                 while($dados = mysqli_fetch_array($resultado)){

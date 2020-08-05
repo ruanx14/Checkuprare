@@ -39,7 +39,7 @@
 }
 @media screen and (max-width:400px){
     .container .graveyard img{
-        max-height: 140px;
+        max-height: 100px;
     }
     .container .ashfall{
         margin-top: 0vh;

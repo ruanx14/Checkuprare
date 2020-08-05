@@ -315,7 +315,7 @@ footer a{
     font-size: 1em;
     text-decoration: none;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .mobile{
         display: block;
     } 
@@ -364,7 +364,8 @@ footer a{
         margin-top: 0vh;
     }
     .container .skulltower .carnivora .itemsName{
-        font-size: 100%;
+        font-size: 11px;
+        text-shadow: none;
     }
     .container .skulltower .carnivora .itemsCheck{
         width: 20px;

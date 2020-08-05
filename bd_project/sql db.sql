@@ -1,8 +1,10 @@
+/*em web n usa
 CREATE SCHEMA IF NOT EXISTS `Checkuprare` DEFAULT CHARACTER SET utf8 ;
+
 USE `Checkuprare` ;
+*/
 
-
-CREATE TABLE IF NOT EXISTS `Checkuprare`.`user` (
+CREATE TABLE IF NOT EXISTS `user` (
   `idUser` INT NOT NULL AUTO_INCREMENT,
   `user` VARCHAR(45) NOT NULL,
   `password` VARCHAR(200) NOT NULL,
@@ -10,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `Checkuprare`.`user` (
 ENGINE = InnoDB;
 
 
-CREATE TABLE IF NOT EXISTS `Checkuprare`.`item` (
+CREATE TABLE IF NOT EXISTS `item` (
   `idItem` INT NOT NULL AUTO_INCREMENT,
   `typeItem` VARCHAR(45) NULL,
   `name` VARCHAR(45) NULL,
@@ -21,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `Checkuprare`.`item` (
 ENGINE = InnoDB;
 
 
-CREATE TABLE IF NOT EXISTS `Checkuprare`.`randomDay` (
+CREATE TABLE IF NOT EXISTS `randomDay` (
   `idRandomDay` INT NOT NULL AUTO_INCREMENT,
   `day` VARCHAR(45) NOT NULL,
   `itemRandom` VARCHAR(45) NOT NULL,
@@ -29,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `Checkuprare`.`randomDay` (
 ENGINE = InnoDB;
 
 
-CREATE TABLE IF NOT EXISTS `Checkuprare`.`userCheck` (
+CREATE TABLE IF NOT EXISTS `userCheck` (
   `idUserCheck` INT NOT NULL AUTO_INCREMENT,
   `user_idUser` INT NOT NULL,
   `item_idItem` INT NOT NULL,

@@ -56,7 +56,7 @@ if($btnCadastro){
                     $num = mysqli_query($conexao, "select count(*) from item");
                     $cont = mysqli_fetch_array($num);
                     for($i=1;$i<=$cont['count(*)'];$i++){
-                        $novaQuery = "INSERT INTO usercheck(user_idUser, item_idItem,done) VALUES (
+                        $novaQuery = "INSERT INTO userCheck(user_idUser,item_idItem,done) VALUES (
                         '".$_SESSION['idUser']."',
                         '".$i."',
                         'false'
