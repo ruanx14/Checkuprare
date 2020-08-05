@@ -8,7 +8,6 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css"> 
-    <link rel="stylesheet" href="../css/myprogress.css"> 
     
     <title>My Progress</title>
 </head>
@@ -16,7 +15,6 @@ session_start();
 <header class="header">
     <nav class="nav">
         <ul class="barrowpoint">
-    
             <li><a href="#"><?=$_SESSION['user']?></a></li>
             <li><a href="../">All items</a></li>
             <li><a href="javascript:location.reload()">My progress</a></li>
@@ -25,7 +23,10 @@ session_start();
         </ul>
     </nav>
 </header>    
-
+<div class="mobile menuvindicator">
+    <div class="mobile tengu" id="tenguzao"><div class="kuuhaku">=</div></div>
+    <div class="mobile naturesilvan">Rare checklist</div>
+</div>
 <container class="container">
     <div class="heartwood">
         <section class="greenguard-1">

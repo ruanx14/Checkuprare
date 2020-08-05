@@ -21,10 +21,13 @@
             <li><a href="./views/myprogress.php">My progress</a></li>
             <li><a href="./views/help.html">Help, what?!</a></li>
             <li><a href="php/logout.php?sair=logout">Logout</a></li>
-            
         </ul>
     </nav>
 </header>
+<div class="mobile menuvindicator">
+    <div class="mobile tengu" id="tenguzao"><div class="kuuhaku">=</div></div>
+    <div class="mobile naturesilvan">Rare checklist</div>
+</div>
 <container class="container">
     <div class="heartwood">
         <section class="greenguard-1">

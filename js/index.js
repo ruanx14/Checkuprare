@@ -1,5 +1,6 @@
 botoes = document.querySelectorAll(".search");
 rarelist = document.getElementById("rarelisthere");
+
 for(var i=0;i<botoes.length;i++){
     botoes[i].onclick = function(e){
         type = e.target.id;
@@ -56,5 +57,16 @@ for(var i=0;i<botoes.length;i++){
         obj.open("POST","php/search.php",true);
         obj.setRequestHeader('Content-type',"application/x-www-form-urlencoded")
         obj.send("type="+type+"&tela=index");  
+ 
     }
+}
+    
+btn = document.getElementById('tenguzao');
+menuNav = document.querySelector('.header');
+    btn.onclick = function(){
+        if(menuNav.style.transform=="translateX(0%)"){
+            menuNav.style.transform = "translateX(-110%)";
+        }else{
+            menuNav.style.transform = "translateX(0%)";
+        }
 }

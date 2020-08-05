@@ -177,6 +177,9 @@ body *, body{
     height: 10vh;
     width: 100%;
 }
+.mobile{
+    display: none;
+}
 /*container*/
 
 .container .heartwood{
@@ -207,6 +210,8 @@ body *, body{
     margin-bottom: 20px;
 }
 .container .heartwood .greenguard-1 ul li:hover{
+    transition: all 1s;
+    transform: scale(1.1);
     background: linear-gradient(rgb(1, 14, 33),rgb(2, 17, 51),rgb(5, 30, 68));
 }  
 .container .heartwood .greenguard-1 ul li a{
@@ -245,7 +250,7 @@ body *, body{
 }
 .container .skulltower{
     padding: 5px;
-    height: 400px;
+    min-height: 400px;
 }
 .container .skulltower{
     display: flex;
@@ -309,4 +314,63 @@ footer a{
     font-weight: bold;
     font-size: 1em;
     text-decoration: none;
+}
+@media screen and (max-width: 400px) {
+    .mobile{
+        display: block;
+    } 
+    .header{
+        margin-top: 10vh;
+        transition: all 1s;
+        transform: translateX(-110%);
+    }
+    .header .nav .barrowpoint{
+        flex-wrap: wrap;
+    }
+    .barrowpoint li{
+        width: 100%;
+    }
+    .menuvindicator{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../image/nav-crop.jpg');
+        background-attachment: scroll;
+        box-shadow: 2px 1px 2px 1px black;
+        width: 100%;
+        height: 10vh;
+    }
+    .menuvindicator .tengu{
+        width: 20%;
+        height: 100%;
+        background-color: rgb(6, 19, 37);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menuvindicator .tengu .kuuhaku{
+        color: white;
+        font-size: 2em;
+        text-align: center;
+        font-weight: bold;
+    }
+    .menuvindicator .naturesilvan{
+        text-align: center;
+        color: white;
+        font-size: 1.3em;
+        width: 80%;
+    }
+    .container .heartwood{
+        margin-top: 0vh;
+    }
+    .container .skulltower .carnivora .itemsName{
+        font-size: 100%;
+    }
+    .container .skulltower .carnivora .itemsCheck{
+        width: 20px;
+        height: 20px;
+    }
+    .container .skulltower .carnivora .itemsBtn{
+        font-size: 100%;
+    }
 }
