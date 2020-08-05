@@ -9,6 +9,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css"> 
     <link rel="stylesheet" href="../css/myprogress.css"> 
+    
     <title>My Progress</title>
 </head>
 <body>
@@ -56,4 +57,5 @@ session_start();
     <a href="https://twitter.com/KuuhakuAQ3D">Kuuhaku</a>
 </footer>
 </body>
+<script src="js/myprogress.js"></script>
 </html>
