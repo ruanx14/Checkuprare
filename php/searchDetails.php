@@ -16,7 +16,6 @@
                     <p>Type item: <b> <?=$dados['typeItem']?> </b></p>
                     <p>Locale:    <b> <?=$dados['locale']?> </b></p>
                     <p>Rate drop: <b> <?=$dados['rateDrop']?> </b></p>
-                    <p>Wiki link: <b><a href="<?=$dados['wiki']?>">Click here</a></b></p>
                 </div>
             </div>
         <?php        

@@ -18,7 +18,6 @@ CREATE TABLE IF NOT EXISTS `item` (
   `name` VARCHAR(45) NULL,
   `locale` VARCHAR(45) NULL,
   `rateDrop` VARCHAR(45) NULL,
-  `wiki` VARCHAR(200) NULL,
   PRIMARY KEY (`idItem`))
 ENGINE = InnoDB;
 
