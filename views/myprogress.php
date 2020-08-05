@@ -73,10 +73,8 @@ if(!isset($_SESSION['logado'])){
                 }
             }
             ?>
-        </div>
-
-
-    </div>
+            
+     </div>
 </container>
 <div class="blackscreen">   
 </div>

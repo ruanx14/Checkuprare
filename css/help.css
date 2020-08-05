@@ -9,7 +9,7 @@
     font-size: 1.4em;
 }
 .container .graveyard img{
-    max-height: 500px;
+    max-height: 400px;
     margin: 0 auto;
     display: block;
 }
@@ -37,7 +37,7 @@
     font-family: arial;
     font-size: 1.3em;
 }
-@media screen and (max-width:400px){
+@media screen and (max-width:600px){
     .container .graveyard img{
         max-height: 100px;
     }

@@ -60,8 +60,54 @@ for(var i=0;i<botoes.length;i++){
  
     }
 }
-    
-//if(document.getElementById('tenguzao')!=undefined){
+executeCheck = function(){
+    btns = document.querySelectorAll(".itemsCheck")
+        for(var i=0;i<btns.length;i++){
+            btns[i].onclick = function(e){
+                idItem = e.target.id;
+                    obj = new XMLHttpRequest();
+                    obj.onreadystatechange = () => {
+                        if (obj.readyState == 4) {
+                            //rarelist.innerHTML = obj.responseText;
+                        }
+                    }
+                obj.open("POST","php/update.php",true);
+                obj.setRequestHeader('Content-type',"application/x-www-form-urlencoded")
+                obj.send("idItem="+idItem+"&tela=index"); 
+            }
+        }
+}
+executeBtns = function(){
+    btnsName = document.querySelectorAll(".itemsName")
+        for(var i=0;i<btnsName.length;i++){
+            btnsName[i].onclick = function(e){
+                itemName = e.target.innerText;
+                    obj = new XMLHttpRequest();
+                    obj.onreadystatechange = () => {
+                        if (obj.readyState == 4) {
+                            blackscreen = document.getElementsByClassName("blackscreen")[0];
+                            blackscreen.innerHTML = obj.responseText;
+                            blackscreen.style.display = "block";
+                            window.onclick = function(event) {
+                                if (event.target == blackscreen) {
+                                    blackscreen.style.display = "none";
+                                }
+                                }
+                            document.getElementsByClassName("close")[0].onclick = function(){
+                                blackscreen.style.display = "none";
+                            }
+                        }
+                    }
+                obj.open("POST","php/searchDetails.php",true);
+                obj.setRequestHeader('Content-type',"application/x-www-form-urlencoded");
+                obj.send("itemName="+itemName); 
+            }
+        }
+}
+executeBtns();
+executeCheck();
+
+if(document.getElementById('tenguzao')!=undefined){
     btn = document.getElementById('tenguzao');
     menuNav = document.querySelector('.header');
         btn.onclick = function(){
@@ -71,4 +117,4 @@ for(var i=0;i<botoes.length;i++){
                 menuNav.style.transform = "translateX(0%)";
             }
     }
-//}
+}
