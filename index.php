@@ -1,6 +1,7 @@
 <?php 
     include "php/conexao.php";
     SESSION_START();
+    //echo "<script>alert('".$_SESSION['idUser']."')</script>";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -49,7 +50,6 @@
     <div class="skulltower" id="rarelisthere"> 
 
     </div>
-
 </container>
 <?php }else{ ?>
 <header class="headerlo">

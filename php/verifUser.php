@@ -48,10 +48,21 @@ if($btnCadastro){
                     '".$dados['password']."'
                     )";
                $cadastrarFoi = mysqli_query($conexao,$sql2);
+
                if($cadastrarFoi){
                     $_SESSION['logado'] = true;
                     $_SESSION['user'] = $dados['user'];
                     $_SESSION['idUser'] = mysqli_insert_id($conexao);
+                    $num = mysqli_query($conexao, "select count(*) from item");
+                    $cont = mysqli_fetch_array($num);
+                    for($i=1;$i<=$cont['count(*)'];$i++){
+                        $novaQuery = "INSERT INTO usercheck(user_idUser, item_idItem,done) VALUES (
+                        '".$_SESSION['idUser']."',
+                        '".$i."',
+                        'false'
+                        )";
+                    $bowbow = mysqli_query($conexao,$novaQuery);
+                    }
                     header("Location: ../");
                }
 
