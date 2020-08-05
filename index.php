@@ -1,11 +1,11 @@
-<?php 
-    include "php/conexao.php";
-    SESSION_START();
-    include "php/randomItem.php";
-?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
+    <?php 
+        include "php/conexao.php";
+        session_start();
+        include "php/randomItem.php";
+    ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css"> 
