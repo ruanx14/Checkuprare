@@ -78,7 +78,12 @@
         Rare checklist
     </nav>
 </header>
-
+<div class="dragonslayer">
+    <div class="ninjaclass">
+        <p>DOESN'T NEED YOUR AE ACCOUNT. </p>
+        <p>You can create or login a new account here to check your progress.</p>
+    </div>
+</div>
 <container class="container">
     <div class="firezard">
         <form method="post" action="php/verifUser.php">
