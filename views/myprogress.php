@@ -74,9 +74,10 @@ session_start();
 
     </div>
 </container>
-
+<div class="blackscreen">   
+</div>
 <footer>
-    <a href="https://twitter.com/KuuhakuAQ3D">Kuuhaku</a>
+    <a href="https://twitter.com/KuuhakuAQ3D">Made by: (Twitter)Kuuhaku</a>
 </footer>
 </body>
 <script src="../js/myprogress.js"></script>

@@ -7,7 +7,7 @@ for(var i=0;i<botoes.length;i++){
             obj.onreadystatechange = () => {
                 if (obj.readyState == 4) {
                     rarelist.innerHTML = obj.responseText;
-
+                   
                     btns = document.querySelectorAll(".itemsCheck")
                     for(var i=0;i<btns.length;i++){
                         btns[i].onclick = function(e){
@@ -22,7 +22,35 @@ for(var i=0;i<botoes.length;i++){
                             obj.setRequestHeader('Content-type',"application/x-www-form-urlencoded")
                             obj.send("idItem="+idItem+"&tela=index"); 
                         }
-                    } 
+                    }
+                    
+                    btnsName = document.querySelectorAll(".itemsName")
+                    for(var i=0;i<btnsName.length;i++){
+                        btnsName[i].onclick = function(e){
+                            itemName = e.target.innerText;
+                             obj = new XMLHttpRequest();
+                                obj.onreadystatechange = () => {
+                                    if (obj.readyState == 4) {
+                                        blackscreen = document.getElementsByClassName("blackscreen")[0];
+                                        blackscreen.innerHTML = obj.responseText;
+                                        blackscreen.style.display = "block";
+                                        window.onclick = function(event) {
+                                            if (event.target == blackscreen) {
+                                              blackscreen.style.display = "none";
+                                            }
+                                          }
+                                        document.getElementsByClassName("close")[0].onclick = function(){
+                                            blackscreen.style.display = "none";
+                                        }
+                                    }
+                                }
+                            obj.open("POST","php/searchDetails.php",true);
+                            obj.setRequestHeader('Content-type',"application/x-www-form-urlencoded");
+                            obj.send("itemName="+itemName); 
+                        }
+                    }
+                    
+
                 }
             }
         obj.open("POST","php/search.php",true);

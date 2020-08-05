@@ -1,7 +1,7 @@
 <?php 
     include "php/conexao.php";
     SESSION_START();
-    //echo "<script>alert('".$_SESSION['idUser']."')</script>";
+    include "php/randomItem.php";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -42,7 +42,7 @@
                     <li><a class="search" id="hardcq" href="#rarelisthere">Hard Craft/Quest Only</a></li>
                 </ul>
         </section>
-        <section class="greenguard-2"> <article>Your luck today are in the item:</article>  </section>
+        <section class="greenguard-2"> <article>Your luck today are in the item: <p id="itemRandom"> <?=$itemRandom?> </p></article>  </section>
     </div>
 
     <div class="livingstone"> <h2>If you got ! You must click in your item to check up in your list =)</h2></div>
@@ -74,8 +74,10 @@
     </div>
 </container>
 <?php } ?>
+<div class="blackscreen">   
+</div>
 <footer>
-    <a href="https://twitter.com/KuuhakuAQ3D">Kuuhaku</a>
+    <a href="https://twitter.com/KuuhakuAQ3D">Made by: (Twitter)Kuuhaku</a>
 </footer>
 </body>
 <script src="js/index.js"></script>
