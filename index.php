@@ -1,5 +1,6 @@
 <?php 
     include "php/conexao.php";
+    SESSION_START();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -10,17 +11,20 @@
     <title>Rare Check-list</title>
 </head>
 <body>
+<?php  if(isset($_SESSION['logado'])) { ?>
 <header class="header">
     <nav class="nav">
         <ul class="barrowpoint">
+            <li><a href="#"><?=$_SESSION['user']?></a></li>
             <li><a href="#">All items</a></li>
             <li><a href="./views/myprogress.php">My progress</a></li>
             <li><a href="./views/help.html">Help, what?!</a></li>
+            <li><a href="php/logout.php?sair=logout">Logout</a></li>
+            
         </ul>
     </nav>
 </header>
 <container class="container">
-
     <div class="heartwood">
         <section class="greenguard-1">
                 <ul>
@@ -47,7 +51,29 @@
     </div>
 
 </container>
+<?php }else{ ?>
+<header class="headerlo">
+    <nav class="navlo">
+        Rare checklist
+    </nav>
+</header>
 
+<container class="container">
+    <div class="firezard">
+        <form method="post" action="php/verifUser.php">
+            <?php 
+                if(isset($_SESSION['msg'])){
+                    echo $_SESSION['msg'];
+                    unset($_SESSION['msg']);
+                } 
+            ?>
+            <input type="text" name="user" placeholder="User">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit" name="btnCadastro" value="Go in, let me check!">
+        </form>
+    </div>
+</container>
+<?php } ?>
 <footer>
     <a href="https://twitter.com/KuuhakuAQ3D">Kuuhaku</a>
 </footer>
