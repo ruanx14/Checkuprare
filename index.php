@@ -16,6 +16,13 @@
 <header class="header">
     <nav class="nav">
         <ul class="barrowpoint">
+            <?php 
+            if($_SESSION['tipouser']=='admin'){
+            ?>
+            <li><a href="php/addRareGeneral.php">Add item</a></li>
+            <?php    
+            }
+            ?>
             <li><a href="#"><?=$_SESSION['user']?></a></li>
             <li><a href="#">All items</a></li>
             <li><a href="./views/myprogress.php">My progress</a></li>
@@ -42,6 +49,7 @@
                     <li><a class="search" id="pet" href="#rarelisthere">Pets Only</a></li>
                     <li><a class="search" id="morph" href="#rarelisthere">Morphs Only</a></li>
                     <li><a class="search" id="glove" href="#rarelisthere">Gloves Only</a></li>
+                    <li><a class="search" id="boot" href="#rarelisthere">Boots Only</a></li>
                     <li><a class="search" id="hardcq" href="#rarelisthere">Hard Craft/Quest Only</a></li>
                 </ul>
         </section>

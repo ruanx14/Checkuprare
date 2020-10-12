@@ -36,6 +36,7 @@ if($btnCadastro){
                         $_SESSION['logado'] = true;
                         $_SESSION['user'] = $bdDados['user'];
                         $_SESSION['idUser'] = $bdDados['idUser'];
+                        $_SESSION['tipouser'] = $bdDados['tipouser'];
                         echo "<meta http-equiv='refresh' content='0 ../'>";
                     }else{
                         echo "<meta http-equiv='refresh' content='0 ../'>";
@@ -43,15 +44,17 @@ if($btnCadastro){
                     }
             }else{
                 $dados['password'] = password_hash($dados['password'],PASSWORD_DEFAULT);
-                $sql2 = "INSERT INTO user (user,password) VALUES (
+                $sql2 = "INSERT INTO user (user,password,tipouser) VALUES (
                     '".$dados['user']."',
-                    '".$dados['password']."'
+                    '".$dados['password']."',
+                    'player'
                     )";
                $cadastrarFoi = mysqli_query($conexao,$sql2);
 
                if($cadastrarFoi){
                     $_SESSION['logado'] = true;
                     $_SESSION['user'] = $dados['user'];
+                    $_SESSION['tipouser'] = 'player';
                     $_SESSION['idUser'] = mysqli_insert_id($conexao);
                     $num = mysqli_query($conexao, "select count(*) from item");
                     $cont = mysqli_fetch_array($num);
